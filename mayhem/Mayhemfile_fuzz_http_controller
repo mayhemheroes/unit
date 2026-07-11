@@ -1,0 +1,9 @@
+project: unit
+target: fuzz_http_controller
+cmds:
+  - cmd: /mayhem/fuzz_http_controller
+    dictionary: /mayhem/fuzz_http_controller.dict
+    libfuzzer: true
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_http_controller/testsuite

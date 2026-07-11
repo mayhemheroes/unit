@@ -1,0 +1,9 @@
+project: unit
+target: fuzz_http_h1p_peer
+cmds:
+  - cmd: /mayhem/fuzz_http_h1p_peer
+    dictionary: /mayhem/fuzz_http_h1p_peer.dict
+    libfuzzer: true
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_http_h1p_peer/testsuite
